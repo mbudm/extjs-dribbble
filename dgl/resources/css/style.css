@@ -1,0 +1,79 @@
+body{
+	font-size:82%;
+	font-family:'Open Sans', 'Helvetica Neue', Helvetica, Trebuchet, sans;
+	margin:0;
+	padding:0;
+}
+figure{
+	display:inline-block;
+	position:relative;
+	margin:0;
+	vertical-align:top;
+	max-width:200px;
+}
+figure img{
+	display:block;
+	width:100%;
+	height:auto;
+}
+figcaption{
+	position:absolute;
+	bottom:5px;
+	margin:0 5px;
+	padding:5px; 	
+	width:auto;
+	background:rgba(255,255,255,0.7);
+	opacity:0;
+}
+figure:hover figcaption{
+	opacity:1;
+	transition: opacity 0.2s ease;
+}
+/*
+ media queries, ensure figures are never wider than teaser image size for a seamless grid
+*/
+
+@media screen and (max-width:200px) {
+	figure{width:100%;}
+}
+@media screen and (min-width: 201px) and (max-width: 400px) {
+	figure{width:50%;}
+}
+@media screen and (min-width: 401px) and (max-width: 600px) {
+	figure{width:33.3333333333333334%;}
+}
+@media screen and (min-width: 601px) and (max-width: 800px) {
+	figure{width:25%;}
+}
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+	figure{width:20%;}
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+	figure{width:16.6666667%;}
+}
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
+	figure{width:14.15%;}
+}
+@media screen and (min-width: 1401px) and (max-width: 1600px) {
+	figure{width:12.5%;}
+}
+
+
+/* for 400px images (too slow)
+@media screen and (max-width: 400px) {
+	figure{width:100%;}
+}
+@media screen and (min-width: 401px) and (max-width: 800px) {
+	figure{width:50%;}
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+	figure{width:33.3333333333333334%;}
+}
+@media screen and (min-width: 1201px) and (max-width: 1600px) {
+	figure{width:25%;}
+}
+@media screen and (min-width: 1601px) and (max-width: 2000px) {
+	figure{width:20%;}
+}
+*/
